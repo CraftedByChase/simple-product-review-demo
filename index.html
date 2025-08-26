@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Product Review Form</h1>
+    <p id="description">Please give us your thoughts about our product here!</p>
+    <div>
+      <form id="survey-form">
+        <h2>Personal Information</h2>
+        <fieldset id="pi">
+          <label for="name" id="name-label" class="block">Full Name*: <input id="name" type="text" placeholder="First AND Last" required /></label>
+          <label for="email" id="email-label" class="block">Email*: <input id="email" type="email" placeholder="Email" required /></label>
+          <label for="number" id="number-label" class="block">Age* <input id="number" type="number" value="18" min="18" max="100" placeholder="age" required></label>
+          <label for="phone-number" id="phone-label" class="block">Phone Number (optional):<input id="phone-number" type="text" min="0" max="9999999999" pattern="[0-9]{10}" placeholder="No Hyphens or Spaces" /></label> 
+        </fieldset>
+        <h2>Product Review</h2>
+        <fieldset id="review">
+          <p>How would you rate this product (0=Awful, 5=Amazing)?</p>
+          <label><input type="radio" name="rating" value="0" />0</label>
+          <label><input type="radio" name="rating" value="1" />1</label>
+          <label><input type="radio" name="rating" value="2" />2</label>
+          <label><input type="radio" name="rating" value="3" />3</label>
+          <label><input type="radio" name="rating" value="4" />4</label>
+          <label><input type="radio" name="rating"  value="5" checked />5</label>
+        <label class="block">What did you like about it? <textarea></textarea></label>
+        <label class="block">What needs to be fixed?<textarea></textarea></label>
+        <label>Additional Comments: <textarea></textarea></label>
+        </fieldset>
+        <h2>Additional Info</h2>
+        <fieldset>
+        <label>How did you hear about this product?<select id="dropdown" required>
+          <option value="">Select One</option>
+          <option value="1">Friend/Colleague</option>
+          <option value="2">TV Commercial</option>
+          <option value="3">Youtube Advertisement</option>
+          <option value="4">Search Results</option>
+          <option value="5">Radio/Newspaper</option>
+          <option value="6">Other</option>
+        </select></label>
+        <label for="interview"><input type="checkbox" id="interview" value="1"/> I'd like to be contacted later for an interview through the personal information provided.</label>
+        <label for="later-use"><input type="checkbox" id="later-use" value="2"/> I consent to my rating being anonymously displayed to the public.</label>
+        </fieldset>
+        <p id="thanks">Thank you for your time and feedback!</p>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+  <body>
+</html>
